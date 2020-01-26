@@ -9,7 +9,7 @@ package module01
 	}
 	return sum
 } */
-
+//functional approach
 func Sum(numbers []int) int {
 	if len(numbers) == 0 {
 		return 0
