@@ -8,6 +8,7 @@ import (
 
 func TestFactor(t *testing.T) {
 	tenPrimes := []int{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31}
+	diffPrimes := []int{}
 	tests := []struct {
 		primes []int
 		number int
@@ -19,6 +20,7 @@ func TestFactor(t *testing.T) {
 		{tenPrimes, 30, []int{2, 3, 5}},
 		{tenPrimes, 720, []int{2, 2, 2, 2, 3, 3, 5}},
 		{tenPrimes, 4, []int{2, 2}},
+		{diffPrimes, 4, []int{4}},
 	}
 	for _, tc := range tests {
 		t.Run(fmt.Sprintf("%v with primes %v", tc.number, tc.primes), func(t *testing.T) {
